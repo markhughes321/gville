@@ -16,68 +16,117 @@
     </nav>
 
     <div class="container-fluid">
+            <div class="card card-body">
+                <h1>Table</h1>
+                <p class="lead">Gorkville League table</p>
+                <table id="leagueTable" class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>L</th>
+                            <th>D</th>
+                            <th>W</th>
+                            <th>GP</th>
+                            <th>P</th>
+                        </tr>
+                        <tr>
+                            <th>Camo</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>0</th>
+                            <th>3</th>
+                            <th>9</th>
+                        </tr>
+                        <tr>
+                            <th>Sinks</th>
+                            <th>1</th>
+                            <th>3</th>
+                            <th>2</th>
+                            <th>6</th>
+                            <th>9</th>
+                        </tr>
+                        <tr>
+                            <th>Sparks</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>1</th>
+                            <th>8</th>
+                            <th>7</th>
+                        </tr>
+                        <tr>
+                            <th>Fitz</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>1</th>
+                            <th>6</th>
+                            <th>6</th>
+                        </tr>
+                        <tr>
+                            <th>Bob</th>
+                            <th>2</th>
+                            <th>2</th>
+                            <th>1</th>
+                            <th>5</th>
+                            <th>5</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+    <div class="container-fluid">
         <div class="card card-body">
-            <h1>Table</h1>
-            <p class="lead">Gorkville League table</p>
-            <table id="leagueTable" class="table table-hover">
+            <h1>Add Result</h1>
+            <form id="results-form">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="playerA">Player A</label>
+                    </div>
+                    <select class="custom-select" id="playerA">
+                        <option selected>Choose...</option>
+                        <option>Sinks</option>
+                        <option>Sparks</option>
+                        <option>Bob</option>
+                        <option>Camo</option>
+                        <option>Fitz</option>
+                    </select>
+                    <input type="text" class="form-control" id="scoreOne" placeholder="Enter score">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text">Player B</label>
+                    </div>
+                    <select class="custom-select" id="playerB">
+                        <option selected>Choose...</option>
+                        <option>Sinks</option>
+                        <option>Sparks</option>
+                        <option>Bob</option>
+                        <option>Camo</option>
+                        <option>Fitz</option>
+                    </select>
+                    <input type="text" class="form-control" id="scoreTwo" placeholder="Enter score">
+                    </div>                
+                    <div>
+                        <input type="submit" value="Submit" class="btn btn-secondary btn-lg btn-block mb-4">
+                    </div>
+            </form>
+            
+            <table class="u-full-width text-center">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>L</th>
-                        <th>D</th>
-                        <th>W</th>
-                        <th>GP</th>
-                        <th>P</th>
-                    </tr>
-                    <tr>
-                        <th>Camo</th>
-                        <th>0</th>
-                        <th>0</th>
-                        <th>0</th>
-                        <th>3</th>
-                        <th>9</th>
-                    </tr>
-                    <tr>
-                        <th>Sinks</th>
-                        <th>1</th>
-                        <th>3</th>
-                        <th>2</th>
-                        <th>6</th>
-                        <th>9</th>
-                    </tr>
-                    <tr>
-                        <th>Sparks</th>
-                        <th>3</th>
-                        <th>4</th>
-                        <th>1</th>
-                        <th>8</th>
-                        <th>7</th>
-                    </tr>
-                    <tr>
-                        <th>Fitz</th>
-                        <th>2</th>
-                        <th>3</th>
-                        <th>1</th>
-                        <th>6</th>
-                        <th>6</th>
-                    </tr>
-                    <tr>
-                        <th>Bob</th>
-                        <th>2</th>
-                        <th>2</th>
-                        <th>1</th>
-                        <th>5</th>
-                        <th>5</th>
+                        <th>playerA</th>
+                        <th>scoreOne</th>
+                        <th></th>
+                        <th>scoreTwo</th>
+                        <th>PlayerB</th>
+                        <th></th>
                     </tr>
                 </thead>
+                <tbody id="results-list"></tbody>
             </table>
-        </div>
+        </div>           
     </div>
 
-
-        
-
-    
     <footer class="mt-5 p-3 text-center bg-light">
         Gorkville &copy;
     </footer>
@@ -86,6 +135,12 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
+    <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+         <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    
     <script src="main.css"></script>
     <script src="app.js"></script>
 </body>
