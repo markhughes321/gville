@@ -63,7 +63,7 @@ class Result {
     });
   
   // Event Listener for delete
-  document.getElementById('results-list').addEventListener('click', function(e){
+  document.getElementById('results-list').addEventListener('click', function(e{
   
     // Instantiate UI
     const ui = new UI();
